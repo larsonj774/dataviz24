@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/us-10m.json", "format": {"feature": "states", "type": "topojson"}}, "mark": {"type": "geoshape"}, "encoding": {"color": {"field": "percent", "type": "quantitative"}, "tooltip": [{"field": "image", "type": "nominal"}]}, "height": 500, "projection": {"type": "albersUsa"}, "title": {"text": "Estimated Percent of Public Transit Energy Provided by Electricity (Tooltip values in raw gallons and KwH)", "anchor": "middle"}, "transform": [{"lookup": "id", "from": {"data": {"name": "data-45b4a078f066a39528699558b2fd9c87"}, "key": "id", "fields": ["image", "percent"]}}], "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-45b4a078f066a39528699558b2fd9c87": [{"id": 2, "State": "AK", "image": "https://imgur.com/lDmC7R4.png", "percent": 0.0}, {"id": 1, "State": "AL", "image": "https://imgur.com/HPlRUgc.png", "percent": 0.0}, {"id": 5, "State": "AR", "image": "https://imgur.com/OJnoQIc.png", "percent": 1.4400787277526454}, {"id": 4, "State": "AZ", "image": "https://imgur.com/VNHFHY2.png", "percent": 5.016364184569404}, {"id": 6, "State": "CA", "image": "https://imgur.com/ogqLN1W.png", "percent": 14.66549919354971}, {"id": 8, "State": "CO", "image": "https://imgur.com/jaaxlfn.png", "percent": 27.118130890799776}, {"id": 9, "State": "CT", "image": "https://imgur.com/93jcY43.png", "percent": 0.611537265994424}, {"id": 11, "State": "DC", "image": "https://imgur.com/0r15xVT.png", "percent": 57.038215625307345}, {"id": 10, "State": "DE", "image": "https://imgur.com/9I8f0iC.png", "percent": 0.33420798855794215}, {"id": 12, "State": "FL", "image": "https://imgur.com/1gLMiyb.png", "percent": 5.595833966033652}, {"id": 13, "State": "GA", "image": "https://imgur.com/w6uCqQM.png", "percent": 17.80714166039734}, {"id": 15, "State": "HI", "image": "https://imgur.com/fkEIIvg.png", "percent": 0.1650356222695692}, {"id": 19, "State": "IA", "image": "https://imgur.com/ifjTl9F.png", "percent": 0.24315114832737408}, {"id": 16, "State": "ID", "image": "https://imgur.com/aQYQkky.png", "percent": 0.5180052145326569}, {"id": 17, "State": "IL", "image": "https://imgur.com/j1Nt9ru.png", "percent": 22.43287183590084}, {"id": 18, "State": "IN", "image": "https://imgur.com/L2i72sA.png", "percent": 12.873555540973905}, {"id": 20, "State": "KS", "image": "https://imgur.com/zyKUOmA.png", "percent": 0.8508597856534221}, {"id": 21, "State": "KY", "image": "https://imgur.com/hsqOXnw.png", "percent": 0.37756074053876554}, {"id": 22, "State": "LA", "image": "https://imgur.com/2jlvioA.png", "percent": 2.7295319993371434}, {"id": 25, "State": "MA", "image": "https://imgur.com/Ue2ruNX.png", "percent": 18.6789007742628}, {"id": 24, "State": "MD", "image": "https://imgur.com/hcKOVoi.png", "percent": 14.957135575427147}, {"id": 23, "State": "ME", "image": "https://imgur.com/9K1VUBN.png", "percent": 0.05803079931250051}, {"id": 26, "State": "MI", "image": "https://imgur.com/CaXeXbK.png", "percent": 1.2144904432080041}, {"id": 27, "State": "MN", "image": "https://imgur.com/RDUqWpV.png", "percent": 8.620401057992689}, {"id": 29, "State": "MO", "image": "https://imgur.com/9WAHZsi.png", "percent": 15.310765953212737}, {"id": 28, "State": "MS", "image": "https://imgur.com/sQEF7i5.png", "percent": 0.012904885336938288}, {"id": 30, "State": "MT", "image": "https://imgur.com/rBCfCPz.png", "percent": 1.9888392749255075}, {"id": 37, "State": "NC", "image": "https://imgur.com/CX4fpKP.png", "percent": 6.054986734426965}, {"id": 38, "State": "ND", "image": "https://imgur.com/a1I01nN.png", "percent": 0.0}, {"id": 31, "State": "NE", "image": "https://imgur.com/B40YS7x.png", "percent": 0.47886456615618855}, {"id": 33, "State": "NH", "image": "https://imgur.com/tG0STO5.png", "percent": 0.0}, {"id": 34, "State": "NJ", "image": "https://imgur.com/DDMVTlE.png", "percent": 25.85394442480333}, {"id": 35, "State": "NM", "image": "https://imgur.com/BPTbx3I.png", "percent": 0.03521018937981395}, {"id": 32, "State": "NV", "image": "https://imgur.com/Lt1mEjB.png", "percent": 0.873683586241935}, {"id": 36, "State": "NY", "image": "https://imgur.com/nV66xIM.png", "percent": 48.58301645763674}, {"id": 39, "State": "OH", "image": "https://imgur.com/pxfUGG2.png", "percent": 6.645049825238471}, {"id": 40, "State": "OK", "image": "https://imgur.com/2mD7Jx5.png", "percent": 3.0114526426401413}, {"id": 41, "State": "OR", "image": "https://imgur.com/6KrMdxf.png", "percent": 19.474172655132683}, {"id": 42, "State": "PA", "image": "https://imgur.com/qrdtbNU.png", "percent": 31.85401357916736}, {"id": 72, "State": "PR", "image": "https://imgur.com/oDWd2HE.png", "percent": 4.924643571625791}, {"id": 44, "State": "RI", "image": "https://imgur.com/u3LN5b8.png", "percent": 0.018177364503957967}, {"id": 45, "State": "SC", "image": "https://imgur.com/WnHGSrW.png", "percent": 2.4464062230890486}, {"id": 46, "State": "SD", "image": "https://imgur.com/ftXkku3.png", "percent": 0.0}, {"id": 47, "State": "TN", "image": "https://imgur.com/1rmOQuO.png", "percent": 0.8599150942472695}, {"id": 48, "State": "TX", "image": "https://imgur.com/4g2uZLD.png", "percent": 8.716591114544357}, {"id": 49, "State": "UT", "image": "https://imgur.com/4fk6gRT.png", "percent": 16.399312167317277}, {"id": 51, "State": "VA", "image": "https://imgur.com/3uwHbAK.png", "percent": 1.0716781971703397}, {"id": 50, "State": "VT", "image": "https://imgur.com/yCTMgIQ.png", "percent": 0.18090042179462354}, {"id": 53, "State": "WA", "image": "https://imgur.com/xnRzYyH.png", "percent": 3.770856739659207}, {"id": 55, "State": "WI", "image": "https://imgur.com/IdIBDxI.png", "percent": 0.6320978663218353}, {"id": 54, "State": "WV", "image": "https://imgur.com/w7YDde7.png", "percent": 6.5312836228150015}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
